@@ -112,8 +112,15 @@ const movingAbroad = [
   },
 ];
 
-const Dropdown = ({ isDropdownOpen, children }) => {
+interface HeaderProps {
+  isDropdownOpen: boolean;
+  children: string
+}
+const Dropdown = ({ 
+  isDropdownOpen,
+  children }:HeaderProps) => {
   return (
+    
     <div
       className={`transition-all duration-800 ease-in-out transform ${
         isDropdownOpen
